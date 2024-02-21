@@ -91,7 +91,16 @@ class MainActivity : AppCompatActivity() {
 
     fun irEstadistica(view: View){
         val intent = Intent(this, MainActivity2::class.java)
+        // creamos un bundle para mandar datos
+        val bundle = Bundle()
+        //ponemos datos en un arreglo local
+        val arregloLocal = intArrayOf(puntosLocalTotal,puntosLocalUno,puntosLocalDos,puntosLocalTres)
+        bundle.putIntArray("LocalPuntaje",arregloLocal)
+        //insertamos bundle en el Intent
+        intent.putExtras(bundle)
+        //empezamos actividad deseada
         startActivity(intent)
     }
 
 }
+

@@ -59,7 +59,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNombreActividad" />
 
-    // counters
+    <!--counters -->
 
     <TextView
         android:id="@+id/etnCounterLocal1"
@@ -127,7 +127,7 @@
         app:layout_constraintStart_toEndOf="@+id/bMasDosVisitante" />
 
 
-    //botones
+    <!-- botones -->
 
     <Button
         android:id="@+id/bMasUnoLocal"
