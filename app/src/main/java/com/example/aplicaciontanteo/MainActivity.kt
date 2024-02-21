@@ -1,5 +1,6 @@
 package com.example.aplicaciontanteo
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -88,5 +89,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun irEstadistica(view: View){
+        val intent = Intent(this, MainActivity2::class.java)
+        startActivity(intent)
+    }
 
 }
