@@ -43,32 +43,35 @@
         android:layout_width="161dp"
         android:layout_height="0dp"
         android:layout_marginBottom="23dp"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar3"
+        android:progress="0"
+        app:layout_constraintBottom_toTopOf="@+id/pbTiros2Local"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ProgressBar
-        android:id="@+id/progressBar3"
+        android:id="@+id/pbTiros2Local"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="161dp"
         android:layout_height="0dp"
         android:layout_marginBottom="29dp"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar4"
+        android:progress="0"
+        app:layout_constraintBottom_toTopOf="@+id/pbTiros3Local"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pbTiros1Local" />
 
     <ProgressBar
-        android:id="@+id/progressBar4"
+        android:id="@+id/pbTiros3Local"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="160dp"
         android:layout_height="0dp"
         android:layout_marginTop="24dp"
+        android:progress="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar3" />
+        app:layout_constraintTop_toBottomOf="@+id/pbTiros2Local" />
 
     <TextView
         android:id="@+id/textView"
@@ -109,19 +112,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tiros de 2:"
-        app:layout_constraintEnd_toStartOf="@+id/progressBar3"
+        app:layout_constraintEnd_toStartOf="@+id/pbTiros2Local"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/progressBar3" />
+        app:layout_constraintTop_toTopOf="@+id/pbTiros2Local" />
 
     <TextView
         android:id="@+id/tvTiros3Local"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tiros de 3:"
-        app:layout_constraintEnd_toStartOf="@+id/progressBar4"
+        app:layout_constraintEnd_toStartOf="@+id/pbTiros3Local"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/progressBar4" />
+        app:layout_constraintTop_toTopOf="@+id/pbTiros3Local" />
 
     <TextView
         android:id="@+id/tvPuntos1Local"
@@ -138,8 +141,8 @@
         android:layout_height="wrap_content"
         android:text="0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/progressBar3"
-        app:layout_constraintTop_toTopOf="@+id/progressBar3" />
+        app:layout_constraintStart_toEndOf="@+id/pbTiros2Local"
+        app:layout_constraintTop_toTopOf="@+id/pbTiros2Local" />
 
     <TextView
         android:id="@+id/tvPuntos3Local"
@@ -147,15 +150,15 @@
         android:layout_height="wrap_content"
         android:text="0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/progressBar4"
-        app:layout_constraintTop_toTopOf="@+id/progressBar4" />
+        app:layout_constraintStart_toEndOf="@+id/pbTiros3Local"
+        app:layout_constraintTop_toTopOf="@+id/pbTiros3Local" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group4"
         android:layout_width="2dp"
         android:layout_height="2dp"
         android:layout_marginBottom="4dp"
-        app:constraint_referenced_ids="textView4,tvPuntos2Local,progressBar3,tvPuntos1Local,tvPuntos3Local,progressBar4,pbTiros1Local,textView5"
+        app:constraint_referenced_ids="textView4,tvPuntos2Local,pbTiros2Local,tvPuntos1Local,tvPuntos3Local,pbTiros3Local,pbTiros1Local,textView5"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity() {
         // creamos un bundle para mandar datos
         val bundle = Bundle()
         //ponemos datos en un arreglo local
-        val arregloLocal = intArrayOf(puntosLocalTotal,puntosLocalUno,puntosLocalDos,puntosLocalTres)
+        val arregloLocal = intArrayOf(puntosLocalUno,puntosLocalDos,puntosLocalTres)
         bundle.putIntArray("LocalPuntaje",arregloLocal)
         //insertamos bundle en el Intent
         intent.putExtras(bundle)
