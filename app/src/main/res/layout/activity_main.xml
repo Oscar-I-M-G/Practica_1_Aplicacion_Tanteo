@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvNombreActividad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Puntuación"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <TextView
+        android:id="@+id/etnLocalTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="41dp"
+        android:ems="3"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLocal" />
+
+    <TextView
+        android:id="@+id/etnVisitanteTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:ems="3"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/tvVisitante"
+        app:layout_constraintTop_toBottomOf="@+id/tvVisitante" />
+
+    <TextView
+        android:id="@+id/tvLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="56dp"
+        android:text="Local"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombreActividad" />
+
+    <TextView
+        android:id="@+id/tvVisitante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="68dp"
+        android:text="Visitante"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombreActividad" />
+
+    // counters
+
+    <TextView
+        android:id="@+id/etnCounterLocal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:text="0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bMasUnoVisitante"
+        app:layout_constraintEnd_toStartOf="@+id/bMasUnoVisitante"
+        app:layout_constraintStart_toEndOf="@+id/bMasUnoLocal" />
+
+    <TextView
+        android:id="@+id/etnCounterLocal3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bMasTresVisitante"
+        app:layout_constraintEnd_toStartOf="@+id/bMasTresVisitante"
+        app:layout_constraintStart_toEndOf="@+id/bMasTresLocal" />
+
+    <TextView
+        android:id="@+id/etnCounterLocal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bMasDosVisitante"
+        app:layout_constraintEnd_toStartOf="@+id/bMasDosVisitante"
+        app:layout_constraintStart_toEndOf="@+id/bMasDosLocal" />
+
+    <TextView
+        android:id="@+id/etnCounterVisitante1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bMasUnoVisitante"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bMasUnoVisitante" />
+
+    <TextView
+        android:id="@+id/etnCounterVisitante3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bMasTresVisitante"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bMasTresVisitante" />
+
+    <TextView
+        android:id="@+id/etnCounterVisitante2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bMasDosVisitante"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bMasDosVisitante" />
+
+
+    //botones
+
+    <Button
+        android:id="@+id/bMasUnoLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:onClick="incrementaEquipoLocalUno"
+        android:text="+1"
+        app:layout_constraintBottom_toBottomOf="@+id/bMasUnoVisitante"
+        app:layout_constraintEnd_toEndOf="@+id/tvLocal" />
+
+    <Button
+        android:id="@+id/bMasDosLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ems="2"
+        android:onClick="incrementaEquipoLocalDos"
+        android:text="+2"
+        app:layout_constraintEnd_toEndOf="@+id/tvLocal"
+        app:layout_constraintTop_toBottomOf="@+id/bMasUnoLocal" />
+
+    <Button
+        android:id="@+id/bMasTresLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:onClick="incrementaEquipoLocalTres"
+        android:text="+3"
+        app:layout_constraintEnd_toEndOf="@+id/tvLocal"
+        app:layout_constraintTop_toBottomOf="@+id/bMasDosLocal" />
+
+    <Button
+        android:id="@+id/bMasUnoVisitante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="23dp"
+        android:ems="2"
+        android:onClick="incrementaEquipoVisitanteUno"
+        android:text="+1"
+        app:layout_constraintEnd_toEndOf="@+id/etnVisitanteTotal"
+        app:layout_constraintTop_toBottomOf="@+id/etnVisitanteTotal" />
+
+    <Button
+        android:id="@+id/bMasDosVisitante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ems="2"
+        android:onClick="incrementaEquipoVisitanteDos"
+
+        android:text="+2"
+        app:layout_constraintStart_toStartOf="@+id/bMasUnoVisitante"
+        app:layout_constraintTop_toBottomOf="@+id/bMasUnoVisitante" />
+
+    <Button
+        android:id="@+id/bMasTresVisitante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:ems="2"
+        android:onClick="incrementaEquipoVisitanteTres"
+
+        android:text="+3"
+        app:layout_constraintStart_toStartOf="@+id/bMasDosVisitante"
+        app:layout_constraintTop_toTopOf="@+id/bMasDosVisitante" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
