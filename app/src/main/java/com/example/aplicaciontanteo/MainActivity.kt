@@ -95,7 +95,9 @@ class MainActivity : AppCompatActivity() {
         val bundle = Bundle()
         //ponemos datos en un arreglo local
         val arregloLocal = intArrayOf(puntosLocalUno,puntosLocalDos,puntosLocalTres)
+        val arregloVisitante = intArrayOf(puntosVisitanteUno,puntosVisitanteDos,puntosVisitanteTres)
         bundle.putIntArray("LocalPuntaje",arregloLocal)
+        bundle.putIntArray("VisitantePuntaje",arregloVisitante)
         //insertamos bundle en el Intent
         intent.putExtras(bundle)
         //empezamos actividad deseada
