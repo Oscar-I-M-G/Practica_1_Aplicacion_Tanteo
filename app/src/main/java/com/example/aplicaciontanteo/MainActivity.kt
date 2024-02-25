@@ -9,6 +9,8 @@ import androidx.lifecycle.ViewModelProvider
 import android.widget.Button
 class MainActivity : AppCompatActivity(){
     private lateinit var viewModel: PuntajeViewModel
+    private lateinit var arregloLocal: IntArray
+    private lateinit var arregloVisitante: IntArray
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -81,23 +83,15 @@ class MainActivity : AppCompatActivity(){
             verPuntosVisitanteTotal.text = viewModel.puntosVisitanteTotal.toString()
         }
 
-
-
-
-
     }
-
-
-
-
-/*
     fun irEstadistica(view: View){
+        viewModel = ViewModelProvider(this).get(PuntajeViewModel::class.java)
         val intent = Intent(this, MainActivity2::class.java)
         // creamos un bundle para mandar datos
         val bundle = Bundle()
         //ponemos datos en un arreglo local
-        val arregloLocal = intArrayOf(puntosLocalUno,puntosLocalDos,puntosLocalTres)
-        val arregloVisitante = intArrayOf(puntosVisitanteUno,puntosVisitanteDos,puntosVisitanteTres)
+        arregloLocal = intArrayOf(viewModel.puntosLocalUno,viewModel.puntosLocalDos,viewModel.puntosLocalTres)
+        arregloVisitante = intArrayOf(viewModel.puntosVisitanteUno,viewModel.puntosVisitanteDos,viewModel.puntosVisitanteTres)
         bundle.putIntArray("LocalPuntaje",arregloLocal)
         bundle.putIntArray("VisitantePuntaje",arregloVisitante)
         //insertamos bundle en el Intent
@@ -105,6 +99,5 @@ class MainActivity : AppCompatActivity(){
         //empezamos actividad deseada
         startActivity(intent)
     }
-*/
 }
 

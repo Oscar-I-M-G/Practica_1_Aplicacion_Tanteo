@@ -35,6 +35,7 @@ class MainActivity2 : AppCompatActivity() {
         pbLocal1 = findViewById(R.id.pbTiros1Local)
         pbLocal2 = findViewById(R.id.pbTiros2Local)
         pbLocal3 = findViewById(R.id.pbTiros3Local)
+
         visitanteArreglo = conseguirValores(intent,"VisitantePuntaje")
         progressVisitante1 = findViewById(R.id.tvPuntos1Visitante)
         progressVisitante2 = findViewById(R.id.tvPuntos2Visitante)
@@ -42,6 +43,7 @@ class MainActivity2 : AppCompatActivity() {
         pbVisitante1 = findViewById(R.id.pbTiros1Visitante)
         pbVisitante2 = findViewById(R.id.pbTiros2Visitante)
         pbVisitante3 = findViewById(R.id.pbTiros3Visitante)
+
         mostrarProgreso()
  }
 
@@ -72,7 +74,6 @@ class MainActivity2 : AppCompatActivity() {
         pbLocal1.progress = getPercentageShot(localArreglo,0)!!.toInt()
         pbLocal2.progress = getPercentageShot(localArreglo,1)!!.toInt()
         pbLocal3.progress = getPercentageShot(localArreglo,2)!!.toInt()
-
         progressVisitante1.text = visitanteArreglo!![0].toString()
         progressVisitante2.text = visitanteArreglo!![1].toString()
         progressVisitante3.text = visitanteArreglo!![2].toString()
@@ -80,7 +81,6 @@ class MainActivity2 : AppCompatActivity() {
         pbVisitante1.progress = getPercentageShot(visitanteArreglo,0)!!.toInt()
         pbVisitante2.progress = getPercentageShot(visitanteArreglo,1)!!.toInt()
         pbVisitante3.progress = getPercentageShot(visitanteArreglo,2)!!.toInt()
-
 
     }
 
